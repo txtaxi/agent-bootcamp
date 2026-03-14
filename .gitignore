@@ -1,0 +1,20 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Local runtime artifacts
+logs/
+data/
+days/data/
+*.sqlite
+*.log
+
+# Environment files
+.env
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

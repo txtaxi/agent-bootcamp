@@ -1,0 +1,17 @@
+[
+  {
+    "name": "weather_case",
+    "input": "weather in beijing",
+    "expected": "Weather reply: beijing is sunny"
+  },
+  {
+    "name": "math_case",
+    "input": "1 + 2 * 3",
+    "expected": "Math reply: 7"
+  },
+  {
+    "name": "unknown_case",
+    "input": "hello",
+    "expected": "Error: unknown intent"
+  }
+]
