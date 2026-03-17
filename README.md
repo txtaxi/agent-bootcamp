@@ -1,59 +1,33 @@
-# Agent Bootcamp
+Agent Bootcamp（Agent 训练营）
 
-21-day agent learning project built as small, testable Python exercises.
+这是一个为期 21 天的 Agent 学习项目，由一系列小型、可测试的 Python 练习组成。
 
-This repository is structured as a learning record:
+本仓库作为一个学习记录进行组织：
 
-- `days/`: daily implementations from routing and state handling to LangGraph memory, evaluation, config, and a small capstone.
-- `tests/`: automated tests for each day.
-- `study_notes/`: reading notes and guided summaries.
-- `ARCHITECTURE_GUIDE.md`: high-level architecture notes.
-- `FINAL_REVIEW_21_DAYS.md`: final learning review.
+days/：每日的实现代码，从基础的路由和状态处理，到 LangGraph 记忆、评估、配置，最后是一个小型的顶点项目（Capstone）。
+tests/：针对每一天练习的自动化测试。
+study_notes/：阅读笔记和引导式总结。
+ARCHITECTURE_GUIDE.md：高层架构说明。
+FINAL_REVIEW_21_DAYS.md：21 天最终学习回顾。
 
-## Highlights
+亮点
 
-- Incremental progression from simple rule-based routing to graph-based agents
-- Memory persistence with JSON and SQLite
-- Retry, fallback, human-in-the-loop, and evaluation exercises
-- End-to-end capstone in `days/day21`
+循序渐进：从简单的基于规则的路由逐步过渡到基于图（Graph）的 Agent 架构。
+记忆持久化：包含使用 JSON 和 SQLite 进行记忆存储的练习。
+高级特性：涵盖重试机制、降级策略、人机协同（Human-in-the-loop）以及评估练习。
+综合实战：在 days/day21 中提供了一个端到端的顶点项目。
 
-## Run Locally
+本地运行
 
-Create a virtual environment, install the project dependencies you use during the exercises, then run:
+创建虚拟环境，安装练习过程中所需的依赖项，然后运行：
 
-```bash
 pytest tests -q
-```
 
-In the current workspace, the test suite passes:
+在当前工作区中，测试套件全部通过：
 
-```text
-86 passed
-```
+86 passed (86 个测试通过)
 
-## Suggested GitHub Upload Scope
+注意事项
 
-Recommended to keep:
-
-- `days/`
-- `tests/`
-- `study_notes/`
-- `ARCHITECTURE_GUIDE.md`
-- `FINAL_REVIEW_21_DAYS.md`
-- `week1_review.md`
-- `week2_review.md`
-- `.env.example`
-
-Recommended not to upload:
-
-- `.venv/`
-- `.pytest_cache/`
-- `__pycache__/`
-- `logs/`
-- generated `*.sqlite`
-- generated runtime JSON under `data/` or `days/data/`
-
-## Notes
-
-- This repo currently contains generated runtime data under both `data/` and `days/data/`. The code references `days/data/`; the root `data/` directory looks redundant and can be removed if you do not want to keep run artifacts.
-- Some source files contain Chinese comments that may display with mojibake in terminals using a different encoding. That does not affect the Python logic, but you may want to normalize encoding before publishing if presentation matters.
+冗余数据目录：目前仓库在 data/ 和 days/data/ 下都包含生成的运行时数据。代码实际引用的是 days/data/；根目录下的 data/ 看起来是多余的，如果您不想保留运行产物，可以将其删除。
+编码问题：部分源文件包含中文注释。如果在编码设置不同的终端中打开，可能会出现乱码（mojibake）。这不会影响 Python 逻辑的执行，但如果您打算公开发布且在意展示效果，建议在发布前统一文件编码格式。
